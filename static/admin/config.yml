@@ -2,6 +2,8 @@ backend:
     name: git-gateway
     repo: AimHigher-Web-Design/how-to-eat-a-veggie
 
+media_folder: src/img
+
 collections:
     - name: recipes
       label: Recipes
