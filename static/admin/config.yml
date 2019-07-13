@@ -14,4 +14,7 @@ collections:
       fields:
           - { name: title, label: Title }
           - { name: body, label: Recipe, widget: markdown }
-          - { name: posts, label: Posts, widget: list }
+          - name: posts
+            label: Posts
+            widget: list
+            field: { name: link, title: Instagram Link, widget: string }
