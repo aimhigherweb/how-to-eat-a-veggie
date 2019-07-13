@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -26,12 +26,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-instagram-all`,
 			options: {
-			  access_token: process.env.GATSBY_INSTAGRAM_API
-			}
+				access_token: process.env.GATSBY_INSTAGRAM_API,
+			},
 		},
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-netlify-cache`,
+		`gatsby-plugin-netlify-cms`,
 	],
 }
