@@ -1,0 +1,15 @@
+backend:
+    name: github
+    repo: AimHigher-Web-Design/how-to-eat-a-veggie
+
+collections:
+    - name: recipes
+      label: Recipes
+      folder: src/recipes
+      create: true
+      editor:
+          preview: false
+      fields:
+          - { name: title, label: Title }
+          - { name: body, label: Recipe, widget: markdown }
+          - { name: posts, label: Posts, widget: list }
