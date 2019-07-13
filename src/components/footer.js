@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import { Facebook, Twitter, Youtube, Linkedin } from 'react-feather'
+import { Instagram, Linkedin } from 'react-feather'
 
 import AimHigher from '../img/aimhigher.svg'
 
@@ -9,15 +9,18 @@ import '../scss/partials/footer.scss'
 const Footer = () => {
 	const menu = [
 			{
-				url: 'https://facebook.com',
-				title: 'Facebook',
-				type: 'facebook',
+				url: 'https://www.instagram.com/howtoeataveggie/',
+				title: 'Instagram',
+				type: 'instagram',
 			},
+			{
+				url: 'https://www.linkedin.com/in/caitlin-kapernick-18abaa18a',
+				title: 'LinkedIn',
+				type: 'linkedin'
+			}
 		],
 		SocialIcons = {
-			facebook: <Facebook />,
-			twitter: <Twitter />,
-			youtube: <Youtube />,
+			instagram: <Instagram />,
 			linkedin: <Linkedin />,
 		}
 	return (

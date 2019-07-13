@@ -1,3 +1,7 @@
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
 	siteMetadata: {
 		title: 'How to Eat a Veggie',
@@ -18,6 +22,12 @@ module.exports = {
 				path: `./src/img`,
 				name: 'images',
 			},
+		},
+		{
+			resolve: `gatsby-source-instagram-all`,
+			options: {
+			  access_token: process.env.GATSBY_INSTAGRAM_API
+			}
 		},
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
