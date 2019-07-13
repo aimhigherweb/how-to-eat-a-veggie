@@ -1,0 +1,46 @@
+{
+	"name": "how-to-eat-a-veggie",
+	"version": "1.0.0",
+	"description": "How to Eat a Veggie Website",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:AimHigher-Web-Design/how-to-eat-a-veggie.git"
+	},
+	"scripts": {
+		"start": "npm run develop",
+		"develop": "gatsby develop",
+		"build": "gatsby build"
+	},
+	"engines": {
+		"node": "11.9.0"
+	},
+	"dependencies": {
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.12.0",
+		"eslint-config-prettier": "^3.4.0",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-node": "^8.0.1",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-react": "^7.12.3",
+		"eslint-plugin-standard": "^4.0.0",
+		"gatsby": "^2.13.19",
+		"gatsby-image": "^2.2.6",
+		"gatsby-plugin-google-tagmanager": "^2.0.5",
+		"gatsby-plugin-netlify-cache": "^1.1.0",
+		"gatsby-plugin-react-helmet": "^3.1.2",
+		"gatsby-plugin-react-svg": "^2.0.0",
+		"gatsby-plugin-sass": "^2.0.1",
+		"gatsby-plugin-sharp": "^2.2.6",
+		"gatsby-plugin-sitemap": "^2.0.4",
+		"gatsby-remark-prettier": "^1.0.0",
+		"gatsby-source-filesystem": "^2.0.16",
+		"gatsby-transformer-sharp": "^2.2.3",
+		"node-sass": "^4.11.0",
+		"prettier": "^1.15.3",
+		"react": "^16.4.2",
+		"react-dom": "^16.4.2",
+		"react-feather": "^1.1.5",
+		"react-helmet": "^5.2.0"
+	}
+}

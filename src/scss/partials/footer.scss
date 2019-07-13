@@ -1,0 +1,73 @@
+@import '../variables.scss';
+
+footer {
+	border-top: 2px solid $primary_dark_75;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+	height: auto;
+	padding: 10px;
+	position: relative;
+	bottom: 0;
+	text-align: right;
+	width: 100vw;
+	z-index: 5;
+
+	.icons {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-around;
+
+		svg {
+			border: 3px solid transparent;
+			color: rgba($primary, 0.5);
+			height: 50px;
+			padding: 10px;
+			width: auto;
+
+			&:active,
+			&:hover,
+			&:focus {
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
+
+	nav {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+
+		span {
+			font-size: 0;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.aimhigher {
+		--secondary: #{$primary};
+		--primary: #{$primary};
+		margin-right: 20px;
+
+		svg {
+			max-width: 200px;
+		}
+	}
+
+	a {
+		&:active,
+		&:hover,
+		&:focus {
+			--secondary: #16a6b1;
+			--primary: #1c75bc;
+		}
+	}
+}

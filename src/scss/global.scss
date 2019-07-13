@@ -1,0 +1,50 @@
+//Fonts
+// @font-face {
+// 	font-family: 'Antic Didone';
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	src: url('../fonts/AnticDidone-Regular.ttf') format('truetype');
+// }
+
+// @font-face {
+// 	font-family: 'Hypatia Sans Pro';
+// 	font-style: normal;
+// 	font-weight: 400;
+// 	src: url('../fonts/HypatiaSansPro-Regular.otf') format('opentype');
+// }
+
+// @font-face {
+// 	font-family: 'Hypatia Sans Pro';
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	src: url('../fonts/HypatiaSansPro-Bold.otf') format('opentype');
+// }
+
+// Imports
+@import 'variables.scss';
+
+* {
+	box-sizing: border-box;
+	font: $font-regular;
+}
+
+img {
+	max-width: 100%;
+}
+
+::-webkit-scrollbar {
+	background-color: transparent;
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba($primary, 0.2);
+
+	&:hover {
+		background-color: $primary;
+	}
+}
+
+body {
+	font-size: 16px;
+}
