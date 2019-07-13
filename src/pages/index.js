@@ -26,7 +26,7 @@ export default class IndexPage extends React.Component {
 
 		return (
 			<Layout meta={meta}>
-				<h1>How to Eat a Veggie</h1>
+				<blockquote>{meta.description}</blockquote>
 				{images}
 			</Layout>
 		)
