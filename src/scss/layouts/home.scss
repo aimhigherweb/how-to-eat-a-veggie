@@ -1,8 +1,36 @@
 @import '../variables.scss';
 
-//Mixins
-@keyframes pulse {
-	0% { transform: scale(0.75); }
-	50% { transform: scale(1); }
-	100% { transform: scale(0.75); }
+.post {
+	margin: 0;
+	padding: 35px;
+	position: relative;
+
+	&:before {
+		@extend %pos-cover;
+		@include sketchy-border($primary);
+
+		content: '';
+	}
+
+	&:nth-child(3n) {
+		&:before {
+			@include sketchy-border2($primary);
+		}
+	}
+
+	&:nth-child(3n-1) {
+		&:before {
+			@include sketchy-border3($primary);
+		}
+	}
+
+	.gatsby-image-wrapper {
+		@include sketchy-border($primary);
+	}
+}
+
+.insta-feed {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-gap: 30px;
 }

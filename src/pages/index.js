@@ -3,6 +3,8 @@ import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
+import '../scss/layouts/home.scss'
+
 export default class IndexPage extends React.Component {
 	render() {
 		const { data } = this.props,
@@ -13,7 +15,7 @@ export default class IndexPage extends React.Component {
 			},
 			images = data.allInstagramContent.edges.map(post => {
 				let postData = {
-					image: post.node.localImage.childImageSharp.fixed,
+					image: post.node.localImage.childImageSharp.fluid,
 					caption: post.node.caption.text,
 				}
 
@@ -27,7 +29,7 @@ export default class IndexPage extends React.Component {
 		return (
 			<Layout meta={meta}>
 				<blockquote>{meta.description}</blockquote>
-				{images}
+				<div className="insta-feed">{images}</div>
 			</Layout>
 		)
 	}
@@ -35,10 +37,10 @@ export default class IndexPage extends React.Component {
 
 const InstaPost = ({ image, caption }) => {
 	return (
-		<div>
-			<Img fixed={image} />
-			<p dangerouslySetInnerHTML={{ __html: caption }} />
-		</div>
+		<figure className="post">
+			<Img fluid={image} />
+			<figcaption dangerouslySetInnerHTML={{ __html: caption }} />
+		</figure>
 	)
 }
 
@@ -59,8 +61,8 @@ export const pageQuery = graphql`
 					}
 					localImage {
 						childImageSharp {
-							fixed {
-								...GatsbyImageSharpFixed_withWebp
+							fluid(maxWidth: 400) {
+								...GatsbyImageSharpFluid_withWebp
 							}
 						}
 					}

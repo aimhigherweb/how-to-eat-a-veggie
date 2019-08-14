@@ -11,9 +11,6 @@
 		"develop": "gatsby develop",
 		"build": "gatsby build"
 	},
-	"engines": {
-		"node": "11.9.0"
-	},
 	"dependencies": {
 		"babel-eslint": "^10.0.1",
 		"dotenv": "^8.0.0",

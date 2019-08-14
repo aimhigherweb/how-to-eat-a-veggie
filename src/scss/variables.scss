@@ -42,3 +42,37 @@ $neutral_dark_25: #161617;
 $neutral_dark_50: #2c2d2e;
 $neutral_dark_75: #424345;
 $neutral_dark_90: #4f5053;
+
+//Extends
+%pos-cover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+//Mixins
+@mixin sketchy-border($colour) {
+	border: solid $colour;
+	border-color: $colour;
+	border-width: 3px 4px 3px 5px;
+	border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+	transform: rotate(2deg);
+}
+
+@mixin sketchy-border2($colour) {
+	border: solid $colour;
+	border-color: $colour;
+	border-width: 3px 3px 5px 5px;
+	border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+	transform: rotate(-2deg);
+}
+
+@mixin sketchy-border3($colour) {
+	border: solid $colour;
+	border-color: $colour;
+	border-width: 5px 3px 3px 5px;
+	border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+	transform: rotate(2deg);
+}
