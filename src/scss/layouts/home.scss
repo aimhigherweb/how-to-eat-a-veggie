@@ -10,6 +10,7 @@
 		@include sketchy-border($primary);
 
 		content: '';
+		z-index: -1;
 	}
 
 	&:nth-child(3n) {
@@ -26,11 +27,61 @@
 
 	.gatsby-image-wrapper {
 		@include sketchy-border($primary);
+		max-height: 400px;
+		width: 100%;
+		max-width: 400px;
+	}
+
+	input[type='checkbox'] {
+		display: none;
+
+		&:checked {
+			& + label {
+				display: none;
+
+				& + span {
+					display: inline;
+				}
+			}
+		}
+	}
+
+	label {
+		cursor: pointer;
+
+		& + span {
+			display: none;
+		}
+	}
+
+	&.c-2,
+	&.c-3 {
+		.gatsby-image-wrapper {
+			float: left;
+			margin-right: 10px;
+		}
+	}
+
+	&.c-2 {
+		grid-column: span 2;
+	}
+
+	&.c-3 {
+		grid-column: span 3;
+	}
+
+	&.r-2 {
+		grid-row: span 2;
+	}
+
+	&.r-3 {
+		grid-row: span 3;
 	}
 }
 
 .insta-feed {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(400px, auto));
 	grid-gap: 30px;
+	grid-auto-flow: dense;
 }

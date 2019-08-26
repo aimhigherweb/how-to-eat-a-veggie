@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import InstaPost from '../components/post'
 
 import '../scss/layouts/home.scss'
 
@@ -15,15 +16,45 @@ export default class IndexPage extends React.Component {
 			},
 			images = data.allInstagramContent.edges.map(post => {
 				let postData = {
-					image: post.node.localImage.childImageSharp.fluid,
-					caption: post.node.caption.text,
+						image: post.node.localImage.childImageSharp.fluid,
+						caption: post.node.caption.text,
+					},
+					caption = postData.caption,
+					classes = 'post',
+					postId = post.node.link.replace('https://www.instagram.com/p/', '').replace('/', '')
+
+				if (caption.length > 3500) {
+					classes += ' c-2 r-2'
+				} else if (caption.length > 3000) {
+					classes += ' r-3'
+				} else if (caption.length > 2000) {
+					classes += ' r-2'
 				}
 
-				postData.caption = postData.caption
-					.replace(/#(\w*)/g, '<a href="https://instagram.com/explore/tags/$1" target="_blank">#$1</a>')
-					.replace(/@(\w*)/g, '<a href="https://instagram.com/$1" target="_blank">@$1</a>')
+				postData.classes = classes
 
-				return <InstaPost {...postData} key={postData.caption} />
+				postData.links = [
+					{
+						title: 'Instagram',
+						url: post.node.link,
+						type: 'external',
+					},
+					{
+						title: 'Facebook',
+						url: `https://www.facebook.com/sharer/sharer.php?u=${meta.slug}/posts/${postId}`,
+						type: 'external',
+					},
+					{
+						title: 'Post',
+						url: `/posts/${postId}`,
+					},
+					{
+						title: 'Recipes',
+						url: `/recipes/tags/${postId}`,
+					},
+				]
+
+				return <InstaPost {...postData} key={caption} />
 			})
 
 		return (
@@ -33,15 +64,6 @@ export default class IndexPage extends React.Component {
 			</Layout>
 		)
 	}
-}
-
-const InstaPost = ({ image, caption }) => {
-	return (
-		<figure className="post">
-			<Img fluid={image} />
-			<figcaption dangerouslySetInnerHTML={{ __html: caption }} />
-		</figure>
-	)
 }
 
 export const pageQuery = graphql`
@@ -59,6 +81,7 @@ export const pageQuery = graphql`
 					caption {
 						text
 					}
+					link
 					localImage {
 						childImageSharp {
 							fluid(maxWidth: 400) {

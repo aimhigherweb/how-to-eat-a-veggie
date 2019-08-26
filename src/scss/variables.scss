@@ -1,47 +1,51 @@
 //Fonts
-$font_regular: 400 1em Arial, sans-serif;
-$font_bold: 700 1em Arial, sans-serif;
-$font_headings: 700 1.5em Arial, sans-serif;
+$font_regular: 400 1em 'Open Sans', Arial, sans-serif;
+$font_bold: 700 1em 'Open Sans', Arial, sans-serif;
+$font_headings: 400 1.5em 'Nunito', Arial, sans-serif;
 
 //Colours
-$primary: #414b43;
-$primary_light_10: #ecedec;
-$primary_light_25: #d0d2d0;
-$primary_light_50: #a0a5a1;
-$primary_light_75: #717872;
-$primary_light_90: #545d56;
+$green_dark: #2f4936;
+$green_light: #679671;
+$green_lighter: #9ed6a3;
 
-$primary_dark_10: #070807;
-$primary_dark_25: #101311;
-$primary_dark_50: #212622;
-$primary_dark_75: #313832;
-$primary_dark_90: #3b443c;
+$primary: #496f57;
+$primary_light_10: #edf1ee;
+$primary_light_25: #d2dbd5;
+$primary_light_50: #a4b7ab;
+$primary_light_75: #779381;
+$primary_light_90: #5b7d68;
 
-$secondary: #a0bbaa;
-$secondary_light_10: #f6f8f7;
-$secondary_light_25: #e7eeea;
-$secondary_light_50: #d0ddd5;
-$secondary_light_75: #b8ccbf;
-$secondary_light_90: #aac2b3;
+$primary_dark_10: #070b09;
+$primary_dark_25: #121c16;
+$primary_dark_50: #25382c;
+$primary_dark_75: #375341;
+$primary_dark_90: #42644e;
 
-$secondary_dark_10: #101311;
-$secondary_dark_25: #282f2b;
-$secondary_dark_50: #505e55;
-$secondary_dark_75: #788c80;
-$secondary_dark_90: #90a899;
+$secondary: #4a19b4;
+$secondary_light_10: #ede8f8;
+$secondary_light_25: #d2c6ec;
+$secondary_light_50: #a58cda;
+$secondary_light_75: #7753c7;
+$secondary_light_90: #5c30bc;
 
-$neutral: #58595c;
-$neutral_light_10: #eeeeef;
-$neutral_light_25: #d5d6d6;
-$neutral_light_50: #acacae;
-$neutral_light_75: #828385;
-$neutral_light_90: #696a6c;
+$secondary_dark_10: #070312;
+$secondary_dark_25: #13062d;
+$secondary_dark_50: #250d5a;
+$secondary_dark_75: #381387;
+$secondary_dark_90: #4317a2;
 
-$neutral_dark_10: #090909;
-$neutral_dark_25: #161617;
-$neutral_dark_50: #2c2d2e;
-$neutral_dark_75: #424345;
-$neutral_dark_90: #4f5053;
+$neutral: #1f251e;
+$neutral_light_10: #e9e9e9;
+$neutral_light_25: #c7c9c7;
+$neutral_light_50: #8f928f;
+$neutral_light_75: #575c56;
+$neutral_light_90: #353b34;
+
+$neutral_dark_10: #030403;
+$neutral_dark_25: #080908;
+$neutral_dark_50: #10130f;
+$neutral_dark_75: #171c17;
+$neutral_dark_90: #1c211b;
 
 //Extends
 %pos-cover {
@@ -58,21 +62,21 @@ $neutral_dark_90: #4f5053;
 	border-color: $colour;
 	border-width: 3px 4px 3px 5px;
 	border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-	transform: rotate(2deg);
+	transform: rotate(1deg);
 }
 
 @mixin sketchy-border2($colour) {
 	border: solid $colour;
 	border-color: $colour;
 	border-width: 3px 3px 5px 5px;
-	border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
-	transform: rotate(-2deg);
+	border-radius: 4% 190% 6% 95%/95% 4% 92% 5%;
+	transform: rotate(-1deg);
 }
 
 @mixin sketchy-border3($colour) {
 	border: solid $colour;
 	border-color: $colour;
 	border-width: 5px 3px 3px 5px;
-	border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+	border-radius: 95% 15% 97% 5%/4% 94% 3% 95%;
 	transform: rotate(2deg);
 }

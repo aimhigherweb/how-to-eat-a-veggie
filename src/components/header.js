@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Logo from '../img/logo.svg'
+
 import '../scss/partials/header.scss'
 
 const Header = () => {
@@ -9,11 +11,15 @@ const Header = () => {
 			slug: '/about',
 			title: 'About',
 		},
+		{
+			slug: '/recipes',
+			title: 'Recipes',
+		},
 	]
 	return (
 		<header>
 			<Link to="/" className="site-logo">
-				How to Eat a Veggie
+				<Logo />
 			</Link>
 
 			<nav>

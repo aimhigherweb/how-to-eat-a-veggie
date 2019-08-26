@@ -24,6 +24,7 @@
 		"eslint-plugin-standard": "^4.0.0",
 		"gatsby": "^2.13.19",
 		"gatsby-image": "^2.2.6",
+		"gatsby-paginate": "^1.1.1",
 		"gatsby-plugin-google-tagmanager": "^2.0.5",
 		"gatsby-plugin-netlify-cache": "^1.1.0",
 		"gatsby-plugin-netlify-cms": "^4.1.5",
